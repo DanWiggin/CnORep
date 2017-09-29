@@ -21,9 +21,16 @@ app.get('/', function(req, res){
 var todoListRoutes = require('./api/routes/todoListRoutes'); //importing route
 todoListRoutes(app); //register the route
 
-// app.use(function(req, res) {
-//   res.status(404).send({url: req.originalUrl + ' not found'})
-// });
+
+var ssi = require("ssi");
+ 
+var inputDirectory = "/public/test";
+var outputDirectory = "/public/output";
+var matcher = "/**/*.shtml";
+ 
+var includes = new ssi(inputDirectory, outputDirectory, matcher);
+includes.compile();
+
 
 app.listen(port);
 
