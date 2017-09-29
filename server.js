@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res){
-	res.sendFile(path.join(__dirname, '/public', 'index.shtml'));
+	res.sendFile('index.html')
 })
 
 var todoListRoutes = require('./api/routes/todoListRoutes'); //importing route
