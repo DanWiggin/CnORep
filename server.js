@@ -3,8 +3,16 @@ var express = require('express'),
   port = process.env.PORT || 3000,
   mongoose = require('mongoose'),
   Task = require('./api/models/todoListModel'), //created model loading here
-  bodyParser = require('body-parser');
+  bodyParser = require('body-parser'),
+  ssi = require("ssi"),
+  inputDirectory = "/public",
+  outputDirectory = "/public",
+  matcher = "/*.shtml",
+  includes = new ssi(inputDirectory, outputDirectory, matcher);
   
+  includes.compile();
+
+
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/Tododb'); 
@@ -15,7 +23,7 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res){
-	res.sendFile('index.html')
+	res.sendFile('index.shtml')
 })
 
 var todoListRoutes = require('./api/routes/todoListRoutes'); //importing route

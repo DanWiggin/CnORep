@@ -6,7 +6,7 @@
         <title>Copper &amp; Optic Terminations</title>
         <meta name="description" content="Cable harness manufacturing company in Stoke on Trent">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700">
@@ -28,6 +28,7 @@
             <img class="logo" src="img/translogo-shadow.png" alt="Copper &amp; Optic Logo">
             <div>
                 <span>
+                    <!--#ECHO var="DATE_LOCAL" -->
                     High performance wiring and Electronic Assembly
                 </span>
                 
