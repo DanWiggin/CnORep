@@ -7,7 +7,7 @@ var express = require('express'),
   ssi = require("ssi"),
   inputDirectory = "/public",
   outputDirectory = "/public",
-  matcher = "/*.shtml",
+  matcher = "/*.html",
   includes = new ssi(inputDirectory, outputDirectory, matcher);
   
   includes.compile();
